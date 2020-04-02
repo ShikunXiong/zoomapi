@@ -1,7 +1,4 @@
 import sys, os
-
-from zoomapi.components import chat_messages
-
 filename = os.path.join(os.path.dirname(__file__), '..')
 sys.path.insert(1, filename)
 from zoomapi import OAuthZoomClient

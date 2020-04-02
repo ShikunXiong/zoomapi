@@ -39,7 +39,8 @@ print("--list channel members--")
 print(response)
 
 # create a channel
-response = json.loads(client.chat_channels.create(name="create_test", type=1, members=[{"email": "aa@gmail.com"}]).content)
+response = json.loads(
+    client.chat_channels.create(name="create_test", type=1, members=[{"email": "aa@gmail.com"}]).content)
 print("--create a channel--")
 print(response)
 
@@ -58,7 +59,8 @@ print("update status code: " + str(response.status_code))
 # print(response)
 
 # invite
-response = json.loads(client.chat_channels.invite(channelId=my_channel_id, members=[{"email": "tjuwangyilin@163.com"}]).content)
+response = json.loads(
+    client.chat_channels.invite(channelId=my_channel_id, members=[{"email": "tjuwangyilin@163.com"}]).content)
 print("--invite response--")
 print(response)
 
@@ -74,5 +76,3 @@ print(response)
 # leave
 response = client.chat_channels.leave(channelId=yl_channel_id)
 print("leave status code: " + str(response.status_code))
-
-
