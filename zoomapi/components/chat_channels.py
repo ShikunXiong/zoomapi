@@ -22,9 +22,8 @@ class ChatChannelsComponentV2(base.BaseComponent):
 
     def update(self, **kwargs):
         util.require_keys(kwargs, ["channelId", "name"])
-        d = json.dumps({"name": "a"})
         return self.patch_request(
-            "/chat/channels/{channelId}".format(channelId=kwargs.get("channelId")), data=d)
+            "/chat/channels/{channelId}".format(channelId=kwargs.get("channelId")), data=kwargs)
 
     def delete(self, **kwargs):
         util.require_keys(kwargs, "channelId")

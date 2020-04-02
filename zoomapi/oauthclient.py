@@ -3,6 +3,7 @@
 from zoomapi import components, util
 from zoomapi.client import ZoomClient
 
+
 class OAuthZoomClient(ZoomClient):
     """Zoom.us REST API Python Client"""
 
