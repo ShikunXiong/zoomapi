@@ -12,6 +12,7 @@ COMPONENT_CLASSES = {
     "report": components.report.ReportComponentV2,
     "webinar": components.webinar.WebinarComponentV2,
     "recording": components.recording.RecordingComponentV2,
+    "chat_channels:": components.chat_channels.ChatChannelsComponentV2
 }
 
 class ZoomClient(util.ApiClient):
@@ -96,3 +97,7 @@ class ZoomClient(util.ApiClient):
     def recording(self):
         """Get the recording component"""
         return self.components.get("recording")
+
+    @property
+    def chat_channels(self):
+        return self.components.get("chat_channels")
