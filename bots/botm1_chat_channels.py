@@ -24,16 +24,13 @@ user = json.loads(user_response.content)
 print(user)
 print('---')
 
-# print(json.loads(client.meeting.list(user_id="me").content))
-# client.chat_channels.list()
-# channels = json.loads(client.chat_channels.list().content)["channels"]
-# print(channels)
+# ids below are used for test
 test_channel_id = "109ab13498c64fd5911a42be1076ea6b"
 my_channel_id = "e00a1405fc5a4dc0980fa3c6dfed5989"
 yl_channel_id = "c1e85cd0e22844baaaa9cb2bf55f7704"
 yl_member_id = "s4fjawkhrtcwcpvxbhxtqw"
-# list channel members
 
+# list channel members
 response = json.loads(client.chat_channels.list_members(channelId=my_channel_id).content)
 print("--list channel members--")
 print(response)
